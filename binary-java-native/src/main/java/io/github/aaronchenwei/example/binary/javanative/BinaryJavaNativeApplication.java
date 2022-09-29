@@ -1,4 +1,4 @@
-package io.github.aaronchenwei.example.javanative;
+package io.github.aaronchenwei.example.binary.javanative;
 
 import io.github.aaronchenwei.example.UserUtility;
 import io.github.aaronchenwei.example.entity.User;
@@ -12,13 +12,13 @@ import lombok.extern.slf4j.Slf4j;
  * @author aaronchenwei
  */
 @Slf4j
-public class JavaNativeApplication {
+public class BinaryJavaNativeApplication {
 
   private static final String FILE_PATH = "java-native-user.bin";
 
   public static void main(String[] args) {
     log.atInfo().log("Start to run...");
-    new JavaNativeApplication().execute();
+    new BinaryJavaNativeApplication().execute();
   }
 
   @SneakyThrows
