@@ -17,17 +17,20 @@ public class BinaryKryoApplication {
 
   private static final String FILE_PATH = "kryo-user.bin";
 
-  private final Kryo kryo = new Kryo();
+  private final Kryo kryo;
 
   public static void main(String[] args) {
     log.atInfo().log("Start to run...");
     new BinaryKryoApplication().execute();
   }
 
+  private BinaryKryoApplication() {
+    kryo = new Kryo();
+    kryo.setRegistrationRequired(false);
+  }
+
   @SneakyThrows
   private void execute() {
-    kryo.setRegistrationRequired(false);
-
     User user = UserUtility.createUser();
 
     /*
