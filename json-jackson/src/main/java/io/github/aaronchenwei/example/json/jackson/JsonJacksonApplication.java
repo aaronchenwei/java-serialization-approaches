@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import io.github.aaronchenwei.example.UserUtility;
-import io.github.aaronchenwei.example.entity.User;
+import io.github.aaronchenwei.example.entity.UserV1;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
@@ -31,7 +31,7 @@ public class JsonJacksonApplication {
 
   @SneakyThrows
   private void execute() {
-    User user = UserUtility.createUser();
+    UserV1 user = UserUtility.createUserV1();
 
     /*
      * Write out Java Object to file

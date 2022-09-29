@@ -46,7 +46,7 @@ public class UserTest {
 
   @Test
   public void test() {
-    User user = new User();
+    UserV1 user = new UserV1();
     user.setId(1L);
     user.setNick("test");
 
@@ -57,7 +57,7 @@ public class UserTest {
 
   @Test
   public void testSerialization() throws IOException, ClassNotFoundException {
-    User user = new User();
+    UserV1 user = new UserV1();
     user.setId(1L);
     user.setNick("johnsmith");
     user.setEmail("johnsmith@test.org");
@@ -76,7 +76,7 @@ public class UserTest {
 
     FileInputStream fileInputStream = new FileInputStream(filePath);
     ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-    User deserializedUser = (User) objectInputStream.readObject();
+    UserV1 deserializedUser = (UserV1) objectInputStream.readObject();
     objectInputStream.close();
     fileInputStream.close();
 

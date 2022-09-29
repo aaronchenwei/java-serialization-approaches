@@ -2,7 +2,6 @@ package io.github.aaronchenwei.example.entity;
 
 import java.io.Serial;
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.Date;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +11,7 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @NoArgsConstructor
-public class User implements Serializable {
+public class UserV1 implements Serializable {
 
   @Serial
   private static final long serialVersionUID = 1L;
@@ -25,6 +24,5 @@ public class User implements Serializable {
   private Date bornAt;
   private long flag;
   private boolean vip;
-  private LocalDateTime timestamp;
 
 }

@@ -2,7 +2,7 @@ package io.github.aaronchenwei.example.binary.hessianlite;
 
 import com.alibaba.com.caucho.hessian.io.Hessian2Output;
 import io.github.aaronchenwei.example.UserUtility;
-import io.github.aaronchenwei.example.entity.User;
+import io.github.aaronchenwei.example.entity.UserV1;
 import java.io.File;
 import java.io.FileOutputStream;
 import lombok.SneakyThrows;
@@ -23,7 +23,7 @@ public class BinaryHessianLiteApplication {
 
   @SneakyThrows
   private void execute() {
-    User user = UserUtility.createUser();
+    UserV1 user = UserUtility.createUserV1();
 
     /*
       Hessian doesn't support JSR-310 Date Types (such as LocalDateTime or etc.)

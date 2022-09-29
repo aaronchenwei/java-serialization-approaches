@@ -3,7 +3,7 @@ package io.github.aaronchenwei.example.binary.kryo;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Output;
 import io.github.aaronchenwei.example.UserUtility;
-import io.github.aaronchenwei.example.entity.User;
+import io.github.aaronchenwei.example.entity.UserV1;
 import java.io.File;
 import java.io.FileOutputStream;
 import lombok.SneakyThrows;
@@ -31,7 +31,7 @@ public class BinaryKryoApplication {
 
   @SneakyThrows
   private void execute() {
-    User user = UserUtility.createUser();
+    UserV1 user = UserUtility.createUserV1();
 
     /*
      * Write out Java Object to file

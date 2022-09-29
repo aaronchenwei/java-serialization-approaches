@@ -4,7 +4,7 @@ import com.fatboyindustrial.gsonjavatime.Converters;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import io.github.aaronchenwei.example.UserUtility;
-import io.github.aaronchenwei.example.entity.User;
+import io.github.aaronchenwei.example.entity.UserV1;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
@@ -28,7 +28,7 @@ public class JsonGsonApplication {
 
   @SneakyThrows
   private void execute() {
-    User user = UserUtility.createUser();
+    UserV1 user = UserUtility.createUserV1();
 
     /*
      * Write out Java Object to file

@@ -1,6 +1,7 @@
 package io.github.aaronchenwei.example;
 
-import io.github.aaronchenwei.example.entity.User;
+import io.github.aaronchenwei.example.entity.UserV1;
+import io.github.aaronchenwei.example.entity.UserV2;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -15,8 +16,22 @@ import lombok.experimental.UtilityClass;
 @UtilityClass
 public class UserUtility {
 
-  public static User createUser() {
-    User user = new User();
+  public static UserV1 createUserV1() {
+    UserV1 user = new UserV1();
+    user.setId(1L);
+    user.setNick("johnsmith");
+    user.setEmail("johnsmith@test.org");
+    user.setPhone("13888886666");
+    user.setBalance(10000.0);
+    LocalDate localDate = LocalDate.of(2000, 1, 1);
+    user.setBornAt(Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant()));
+    user.setFlag(0L);
+    user.setVip(false);
+    return user;
+  }
+
+  public static UserV2 createUserV2() {
+    UserV2 user = new UserV2();
     user.setId(1L);
     user.setNick("johnsmith");
     user.setEmail("johnsmith@test.org");
@@ -30,10 +45,28 @@ public class UserUtility {
     return user;
   }
 
-  public static List<User> createUsers(int number) {
-    var users = new ArrayList<User>(number);
+  public static List<UserV1> createUsersV1(int number) {
+    var users = new ArrayList<UserV1>(number);
     for (int i = 1; i <= number; i++) {
-      User user = new User();
+      UserV1 user = new UserV1();
+      user.setId(i);
+      user.setNick("johnsmith" + i);
+      user.setEmail("johnsmith" + i + "@test.org");
+      user.setPhone(Long.toString(13888880000L + i));
+      user.setBalance(10000.0 + i);
+      LocalDate localDate = LocalDate.of(2000, 1, 1);
+      user.setBornAt(Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant()));
+      user.setFlag(0L);
+      user.setVip(false);
+      users.add(user);
+    }
+    return users;
+  }
+
+  public static List<UserV2> createUsersV2(int number) {
+    var users = new ArrayList<UserV2>(number);
+    for (int i = 1; i <= number; i++) {
+      UserV2 user = new UserV2();
       user.setId(i);
       user.setNick("johnsmith" + i);
       user.setEmail("johnsmith" + i + "@test.org");
