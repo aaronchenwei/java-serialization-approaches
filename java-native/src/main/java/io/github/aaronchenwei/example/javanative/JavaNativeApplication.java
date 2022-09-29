@@ -14,12 +14,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class JavaNativeApplication {
 
-  private static final String filePath = "javanativeuser.bin";
+  private static final String FILE_PATH = "java-native-user.bin";
 
   public static void main(String[] args) {
     log.atInfo().log("Start to run...");
-    JavaNativeApplication application = new JavaNativeApplication();
-    application.execute();
+    new JavaNativeApplication().execute();
   }
 
   @SneakyThrows
@@ -29,18 +28,18 @@ public class JavaNativeApplication {
     /*
      * Write out Java Object to file
      */
-    try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(filePath))) {
+    try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(FILE_PATH))) {
       objectOutputStream.writeObject(user);
     }
 
     /*
      * Serialized Java Object size
      */
-    File file = new File(filePath);
+    File file = new File(FILE_PATH);
     log.atInfo().log("File size = {}", file.length());
 
     boolean ret = file.delete();
-    if(ret) {
+    if (ret) {
       log.atInfo().log("Serialized file has been deleted.");
     }
   }
