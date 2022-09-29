@@ -43,7 +43,7 @@ public class UserUtility {
       user.setBornAt(Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant()));
       user.setFlag(0L);
       user.setVip(false);
-      user.setTimestamp(LocalDateTime.now());
+      user.setTimestamp(LocalDateTime.of(2022, 10, 1, 0, 0));
       users.add(user);
     }
     return users;
