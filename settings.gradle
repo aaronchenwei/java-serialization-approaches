@@ -1,4 +1,4 @@
 rootProject.name = 'java-serialization-approaches'
 include 'common'
 include 'java-native'
-
+include 'json-gson'
