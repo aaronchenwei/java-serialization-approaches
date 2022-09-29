@@ -1,4 +1,4 @@
-package io.github.aaronchenwei.example.javanative;
+package io.github.aaronchenwei.example.json.gson;
 
 import com.fatboyindustrial.gsonjavatime.Converters;
 import com.google.gson.Gson;
