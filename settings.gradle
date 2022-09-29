@@ -1,1 +1,3 @@
 rootProject.name = 'java-serialization-approaches'
+include 'common'
+
