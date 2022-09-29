@@ -1,27 +1,24 @@
-package io.github.aaronchenwei.example.binary.javanative;
+package io.github.aaronchenwei.example.binary.hessian;
 
+import com.caucho.hessian.io.Hessian2Output;
 import io.github.aaronchenwei.example.UserUtility;
 import io.github.aaronchenwei.example.entity.User;
 import java.io.File;
 import java.io.FileOutputStream;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import org.nustaq.serialization.FSTConfiguration;
-import org.nustaq.serialization.FSTObjectOutput;
 
 /**
  * @author aaronchenwei
  */
 @Slf4j
-public class BinaryFSTApplication {
+public class BinaryHessianApplication {
 
-  private static final String FILE_PATH = "fst-user.bin";
-
-  private static FSTConfiguration fstConfiguration = FSTConfiguration.createDefaultConfiguration();
+  private static final String FILE_PATH = "hessian-user.bin";
 
   public static void main(String[] args) {
     log.atInfo().log("Start to run...");
-    new BinaryFSTApplication().execute();
+    new BinaryHessianApplication().execute();
   }
 
   @SneakyThrows
@@ -29,16 +26,23 @@ public class BinaryFSTApplication {
     User user = UserUtility.createUser();
 
     /*
-     * Write out Java Object to file
+      Hessian doesn't support JSR-310 Date Types (such as LocalDateTime or etc.)
+     */
+    user.setTimestamp(null);
+
+    /*
+      Write out Java Object to file
      */
     try (var fileOutputStream = new FileOutputStream(FILE_PATH)) {
-      FSTObjectOutput out = fstConfiguration.getObjectOutput(fileOutputStream);
-      out.writeObject(user);
-      out.flush();
+      Hessian2Output hessian2Output = new Hessian2Output(fileOutputStream);
+      hessian2Output.startMessage();
+      hessian2Output.writeObject(user);
+      hessian2Output.completeMessage();
+      hessian2Output.close();
     }
 
     /*
-     * Serialized Java Object size
+      Serialized Java Object size
      */
     File file = new File(FILE_PATH);
     log.atInfo().log("File size = {}", file.length());

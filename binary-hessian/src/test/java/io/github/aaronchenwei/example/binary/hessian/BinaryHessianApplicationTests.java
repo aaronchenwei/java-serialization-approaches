@@ -1,4 +1,4 @@
-package io.github.aaronchenwei.example.binary.javanative;
+package io.github.aaronchenwei.example.binary.hessian;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,4 +8,5 @@ public class BinaryHessianApplicationTests {
   public void test() {
 
   }
+
 }
