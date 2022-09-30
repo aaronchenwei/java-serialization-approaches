@@ -10,14 +10,14 @@ import org.nustaq.serialization.FSTConfiguration;
 import org.nustaq.serialization.FSTObjectOutput;
 
 /**
- * @author aaronchenwei
+ * @author Aaron
  */
 @Slf4j
 public class BinaryFSTApplication {
 
   private static final String FILE_PATH = "fst-user.bin";
 
-  private static FSTConfiguration fstConfiguration = FSTConfiguration.createDefaultConfiguration();
+  private static final FSTConfiguration fstConfiguration = FSTConfiguration.createDefaultConfiguration();
 
   public static void main(String[] args) {
     log.atInfo().log("Start to run...");
