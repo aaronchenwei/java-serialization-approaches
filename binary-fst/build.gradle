@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    implementation project(':common')
+    implementation project(':common-dto')
 
     //implementation 'de.ruedigermoeller:fst:2.57'
     implementation 'de.ruedigermoeller:fst:3.0.3-jdk17'

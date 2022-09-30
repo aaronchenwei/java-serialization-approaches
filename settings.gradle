@@ -1,5 +1,5 @@
 rootProject.name = 'java-serialization-approaches'
-include 'common'
+include 'common-dto'
 include 'binary-java-native'
 include 'json-gson'
 include 'json-jackson'

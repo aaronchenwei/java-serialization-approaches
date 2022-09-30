@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    implementation project(':common')
+    implementation project(':common-dto')
 
     implementation 'com.alibaba:hessian-lite:3.2.13'
 

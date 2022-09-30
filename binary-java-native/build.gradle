@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    implementation project(':common')
+    implementation project(':common-dto')
 
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
