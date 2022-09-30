@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
+ * A simple Java DTO class cover all Java primitive Data Types
+ *
  * @author aaronchenwei
  */
 @Data
@@ -17,12 +19,19 @@ public class UserV1 implements Serializable {
   private static final long serialVersionUID = 1L;
 
   private long id;
+
   private String nick;
+
   private String email;
+
   private String phone;
+
   private double balance;
+
   private Date bornAt;
+
   private long flag;
+
   private boolean vip;
 
 }

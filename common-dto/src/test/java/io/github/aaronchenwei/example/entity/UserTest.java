@@ -66,7 +66,6 @@ public class UserTest {
     user.setBornAt(new Date());
     user.setFlag(0L);
     user.setVip(false);
-    user.setTimestamp(LocalDateTime.now());
 
     FileOutputStream fileOutputStream = new FileOutputStream(filePath);
     ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
