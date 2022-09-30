@@ -2,32 +2,45 @@
 
 ## Frameworks
 
-- Protobuf: native and protostuff  
+- Protobuf: native and protostuff
   - https://developers.google.com/protocol-buffers/
-- FlatBuffers: 
+- FlatBuffers:
   - https://google.github.io/flatbuffers/
-- Json: 
+- Json:
   - https://www.json.org/
-- Kryo: 
+- Kryo:
   - https://github.com/EsotericSoftware/kryo
-- Hessian: 
+- Hessian:
   - http://hessian.caucho.com/
-- Avro: 
-  - https://avro.apache.org/     
+- Avro:
+  - https://avro.apache.org/
 - Kafka Schema
-- CBOR: 
+- CBOR:
   - http://cbor.io/
-- MessagePack: 
+- MessagePack:
   - https://msgpack.org/
-- Thrift: 
-  - http://thrift.apache.org/ 
+- Thrift:
+  - http://thrift.apache.org/
   - https://github.com/apache/thrift/blob/master/doc/specs/thrift-compact-protocol.md
-- SBE: 
+- SBE:
   - https://github.com/real-logic/simple-binary-encoding
-- Jackson binary format backends: avro, cbor, protobuf, smile: 
+- Jackson binary format backends: avro, cbor, protobuf, smile:
   - https://github.com/FasterXML/jackson-dataformats-binary
-- FlatBuffers: 
+- FlatBuffers:
   - https://google.github.io/flatbuffers/
-- capnproto: 
-  - https://capnproto.org/   
+- capnproto:
+  - https://capnproto.org/
   - https://dwrensha.github.io/capnproto-java/index.html
+
+## Serialized Size
+
+Here is the comparison to binary size of serialized objects.
+
+|              | Object Max<br/>(bytes) | Object Min<br/>(bytes) |
+|--------------|------------------------|------------------------|
+| JDK          | 205                    | 205                    |
+| FST          | 90                     | 88                     |
+| Kryo         | 32                     | 32                     |
+| Hessian      | 189                    | 187                    |
+| Hessian Lite | 189                    | 187                    |
+| Message Pack | 124                    | 123                    |
