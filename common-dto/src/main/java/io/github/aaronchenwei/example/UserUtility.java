@@ -9,12 +9,15 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import lombok.experimental.UtilityClass;
+import net.datafaker.Faker;
 
 /**
  * @author aaronchenwei
  */
 @UtilityClass
 public class UserUtility {
+
+  private static final Faker faker = new Faker();
 
   public static UserV1 createUserV1() {
     UserV1 user = new UserV1();
@@ -80,6 +83,20 @@ public class UserUtility {
       users.add(user);
     }
     return users;
+  }
+
+  public static UserV1 createFakerUserV1() {
+    UserV1 user = new UserV1();
+    user.setId(1L);
+    user.setNick(faker.name().fullName());
+    user.setEmail(faker.internet().emailAddress());
+    user.setPhone(faker.phoneNumber().cellPhone());
+    user.setBalance(10000.0);
+    LocalDate localDate = LocalDate.of(2000, 1, 1);
+    user.setBornAt(Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant()));
+    user.setFlag(0L);
+    user.setVip(false);
+    return user;
   }
 
 }
