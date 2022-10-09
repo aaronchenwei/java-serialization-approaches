@@ -1,0 +1,92 @@
+syntax = "proto3";
+
+package io.github.aaronchenwei.example.binary.proto;
+
+option java_multiple_files = true;
+option java_package = "io.github.aaronchenwei.example.binary.proto";
+
+message Movie{
+  string title = 1;
+  repeated Artist directors = 2;
+  repeated Artist cast = 3;
+  Time runtime = 4;
+  Date release_date = 5;
+  repeated string production_houses = 6;
+  repeated string vfx_studios = 7;
+  repeated Artist music_directors = 8;
+  repeated Accolades accolades = 9;
+  repeated Genre genres = 10;
+  optional float boxoffice = 15;
+}
+
+message Person{
+  string name = 1;
+  Date date_of_birth = 2;
+  enum Gender{
+    MALE = 0;
+    FEMALE = 1;
+    TRANS = 3;
+    UNKNOWN = 4;
+  }
+  Gender gender = 3;
+  int32 age = 4;
+}
+
+message Artist{
+  Person person = 1;
+  int32 accolades = 2;
+}
+
+message Date{
+  int32 year = 1;
+  int32 month = 2;
+  int32 day = 3;
+}
+
+message Accolades{
+  string accolade_name = 1;
+  AwardCategory category_name = 2;
+  repeated Person people = 3;
+  enum Status{
+    UNKNOWN = 0;
+    WON = 1;
+    NOMINATED = 2;
+  }
+  Status status = 4;
+}
+
+message Time{
+  int32 hours = 1;
+  int32 minutes = 2;
+  int32 seconds = 3;
+}
+
+enum Genre{
+  OTHER = 0;
+  ACTION = 1;
+  ADVENTURE = 2;
+  COMEDY = 3;
+  CRIME_AND_MYSTERY = 4;
+  FANTASY = 5;
+  HISTORICAL = 6;
+  HISTORICAL_FICTION = 601;
+  HORROR = 7;
+  ROMANCE = 8;
+  SATIRE = 9;
+  SCIENCE_FICTION = 10;
+  CYBERPUNK_AND_DERIVATIVES = 1001;
+  SPECULATIVE = 11;
+  THRILLER = 12;
+  WESTERN = 13;
+  DRAMA = 14;
+  ANIMATION = 15;
+  ACTION_AND_ADVENTURE = 16;
+}
+
+enum AwardCategory{
+  UNKNOWN = 0;
+  BEST_FILM_EDITING = 1;
+  BEST_SOUND = 2;
+  BEST_EFFECTS_SOUND_EFFECTS_EDITING = 3;
+  BEST_EFFECT_VISUAL_EFFECTS = 4;
+}
