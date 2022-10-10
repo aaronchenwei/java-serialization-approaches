@@ -7,6 +7,7 @@
 - CBOR:
   - http://cbor.io/
 - Gson
+  - https://github.com/google/gson
 - Jackson binary format backends: avro, cbor, protobuf, smile:
   - https://github.com/FasterXML/jackson-dataformats-binary
 - Kryo:
