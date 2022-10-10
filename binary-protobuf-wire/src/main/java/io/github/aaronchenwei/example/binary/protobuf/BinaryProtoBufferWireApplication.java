@@ -11,13 +11,13 @@ import lombok.extern.slf4j.Slf4j;
  * @author aaronchenwei
  */
 @Slf4j
-public class BinaryProtoBufferApplication {
+public class BinaryProtoBufferWireApplication {
 
-  private static final String FILE_PATH = "java-protobuf-simple.bin";
+  private static final String FILE_PATH = "java-protobuf-wire-simple.bin";
 
   public static void main(String[] args) {
     log.atInfo().log("Start to run...");
-    new BinaryProtoBufferApplication().execute();
+    new BinaryProtoBufferWireApplication().execute();
   }
 
   @SneakyThrows

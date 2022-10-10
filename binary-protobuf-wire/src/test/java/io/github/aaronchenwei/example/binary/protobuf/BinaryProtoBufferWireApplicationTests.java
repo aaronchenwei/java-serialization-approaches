@@ -11,7 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 @Slf4j
-public class BinaryProtoBufferApplicationTests {
+public class BinaryProtoBufferWireApplicationTests {
 
   private static final int MAX_ARRAY_SIZE = 1 << 20;
 
