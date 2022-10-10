@@ -1,38 +1,40 @@
-# java-serialization-approaches
+# java-serialization-approaches <!-- omit in toc -->
 
-## Frameworks
+## 1. Frameworks
 
-- Protobuf: native and protostuff
-  - https://developers.google.com/protocol-buffers/
-- FlatBuffers:
-  - https://google.github.io/flatbuffers/
 - Json:
   - https://www.json.org/
+- CBOR:
+  - http://cbor.io/
+- Gson
+- Jackson binary format backends: avro, cbor, protobuf, smile:
+  - https://github.com/FasterXML/jackson-dataformats-binary
 - Kryo:
   - https://github.com/EsotericSoftware/kryo
 - Hessian:
   - http://hessian.caucho.com/
-- Avro:
-  - https://avro.apache.org/
-- Kafka Schema
-- CBOR:
-  - http://cbor.io/
 - MessagePack:
   - https://msgpack.org/
+- Protobuf: native and protostuff
+  - https://developers.google.com/protocol-buffers/
+- FlatBuffers:
+  - https://google.github.io/flatbuffers/
+- Avro:
+  - https://avro.apache.org/
 - Thrift:
   - http://thrift.apache.org/
   - https://github.com/apache/thrift/blob/master/doc/specs/thrift-compact-protocol.md
 - SBE:
   - https://github.com/real-logic/simple-binary-encoding
-- Jackson binary format backends: avro, cbor, protobuf, smile:
-  - https://github.com/FasterXML/jackson-dataformats-binary
-- FlatBuffers:
-  - https://google.github.io/flatbuffers/
+
+
 - capnproto:
   - https://capnproto.org/
   - https://dwrensha.github.io/capnproto-java/index.html
 
-## Serialized Size
+## 2. Testing
+
+### 2.2 Serialized Size
 
 Here is the comparison to binary size of serialized objects.
 
