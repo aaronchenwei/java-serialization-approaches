@@ -1,0 +1,12 @@
+rootProject.name = "java-serialization-approaches"
+include("common-dto")
+include("binary-java-native")
+include("json-gson")
+include("json-jackson")
+include("binary-kryo")
+include("binary-fst")
+include("binary-hessian")
+include("binary-hessian-lite")
+include("binary-msgpack-jackson")
+include("binary-protobuf")
+include("binary-protobuf-wire")
