@@ -95,7 +95,7 @@ public class GsonTests {
     log.atInfo().log("{}", pojo.getField());
     // TODO - extra fields are ignored by default, need a customized type adaptor
     var gson = new GsonBuilder().setPrettyPrinting().create();
-    var jsonOutput = gson.toJson(pojo, CustomPOJOComposition.class);
+    var jsonOutput = gson.toJson(pojo, CustomPOJOInheritance.class);
     log.atInfo().log(jsonOutput);
   }
 }
