@@ -18,7 +18,7 @@ repositories {
 dependencies {
   implementation(project(":common-dto"))
 
-  implementation("com.squareup.wire:wire-runtime:4.4.2")
+  implementation("com.squareup.wire:wire-runtime:4.4.3")
 
   compileOnly("org.projectlombok:lombok:1.18.24")
   annotationProcessor("org.projectlombok:lombok:1.18.24")
