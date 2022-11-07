@@ -17,7 +17,7 @@ repositories {
 dependencies {
   implementation(project(":common-dto"))
 
-  implementation("com.fasterxml.jackson.core:jackson-core:2.13.4")
+  implementation("com.fasterxml.jackson.core:jackson-core:2.14.0")
   implementation("com.fasterxml.jackson.core:jackson-annotations:2.14.0")
   implementation("com.fasterxml.jackson.core:jackson-databind:2.14.0")
   implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.0")
