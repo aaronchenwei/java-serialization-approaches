@@ -18,7 +18,7 @@ dependencies {
   implementation(project(":common-dto"))
 
   //implementation("de.ruedigermoeller:fst:2.57")
-  implementation("de.ruedigermoeller:fst:3.0.3-jdk17")
+  implementation("de.ruedigermoeller:fst:3.0.4-jdk17")
 
 
   compileOnly("org.projectlombok:lombok:1.18.24")
