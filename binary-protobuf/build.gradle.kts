@@ -26,7 +26,7 @@ dependencies {
   testCompileOnly("org.projectlombok:lombok:1.18.24")
   testAnnotationProcessor("org.projectlombok:lombok:1.18.24")
 
-  implementation("org.slf4j:slf4j-api:2.0.3")
+  implementation("org.slf4j:slf4j-api:2.0.4")
   runtimeOnly("ch.qos.logback:logback-classic:1.4.4")
 
   testImplementation(platform("org.junit:junit-bom:5.9.1"))
