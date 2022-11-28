@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-  implementation("net.datafaker:datafaker:1.6.0")
+  implementation("net.datafaker:datafaker:1.7.0")
 
   compileOnly("org.projectlombok:lombok:1.18.24")
   annotationProcessor("org.projectlombok:lombok:1.18.24")
