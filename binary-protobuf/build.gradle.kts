@@ -18,7 +18,7 @@ repositories {
 dependencies {
   implementation(project(":common-dto"))
 
-  implementation("com.google.protobuf:protobuf-java:3.21.9")
+  implementation("com.google.protobuf:protobuf-java:3.21.10")
 
   compileOnly("org.projectlombok:lombok:1.18.24")
   annotationProcessor("org.projectlombok:lombok:1.18.24")
