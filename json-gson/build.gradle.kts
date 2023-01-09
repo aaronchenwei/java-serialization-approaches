@@ -17,7 +17,7 @@ repositories {
 dependencies {
   implementation(project(":common-dto"))
 
-  implementation("com.google.code.gson:gson:2.10")
+  implementation("com.google.code.gson:gson:2.10.1")
   implementation("com.fatboyindustrial.gson-javatime-serialisers:gson-javatime-serialisers:1.1.2")
 
   compileOnly("org.projectlombok:lombok:1.18.24")
