@@ -17,7 +17,7 @@ repositories {
 dependencies {
   implementation(project(":common-dto"))
 
-  implementation("com.esotericsoftware:kryo:5.3.0")
+  implementation("com.esotericsoftware:kryo:5.4.0")
 
   compileOnly("org.projectlombok:lombok:1.18.24")
   annotationProcessor("org.projectlombok:lombok:1.18.24")
