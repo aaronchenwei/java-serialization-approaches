@@ -26,7 +26,7 @@ dependencies {
   implementation("org.slf4j:slf4j-api:2.0.6")
   runtimeOnly("ch.qos.logback:logback-classic:1.4.5")
 
-  testImplementation(platform("org.junit:junit-bom:5.9.1"))
+  testImplementation(platform("org.junit:junit-bom:5.9.2"))
   testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
